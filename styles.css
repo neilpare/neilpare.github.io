@@ -1,94 +1,143 @@
-/* Setup part */
-/* Just styling the page */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: none;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+} /* this solved header and main content overlapping (idk why tho)*/
 
 body {
-    margin: 0;
-    padding: 0;
-    background: #171717;
-    width: 100vw;
-    height: auto;
-    display: flex;
-    align-items: center;
-    flex-flow: column;
+    width: 100%;
+    height: 100vh; /* vh stands for viewport height, it simply is the currently visible section "view height" ;) */
+    margin: 0; /* some browsers add horizontal margins, making the page horizontally scrollable, bad! set them to 0! */
+    background-color: #12171a; /* maybe change this to just background, since it accepts images arguments, play! */
+    color: #99b898; /* somehow it's obvious that this is referred to text, so text color! (white now :) */
     font-family: Helvetica;
 }
 
-h1 {
-    font-size: 70px;
-    line-height: 1;
-    font-weight: 600;
-    color: #fff;
-    margin: 25px 0 0;
-    margin-bottom: 30px;
-}
-
-.white-highlight {
-    padding: 3px;
-    color: black;
-    background-color: #fff;
-}
-
-/* Without main styled the Grid would appear stretched */
-
-main {
+header {
+    position: sticky;
+    top: 0px;
+    position: fixed;
     width: 100vw;
+    background-color: #2a363b;
+    margin-bottom: 1px;
+    padding-bottom: 1px;
+}
+
+.header-h1 {
     display: flex;
     justify-content: center;
+    color: #ff9538;
 }
 
-main section {
-    width: 100%;
-    max-width: 800px;
-    height: 100vh;
-    max-height: 450px;
-    background: #313131;
+.header-h2 {
+    display: flex;
+    justify-content: center;
+    font-size: small;
+    color: #d48443
 }
 
-/* Why you're here */
-/* The grid container is there just to make the content display as a grid */
-
-#grid {
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(3, 1fr);
-    grid-gap: 15px;
-    padding: 15px;
+article.cat-widget {
+    margin-top: 120px;
 }
 
-/* Using flex here let us manage the box content very nicely */
-
-#grid .box {
+.cat-box {
+    margin-top: 50px;
+    margin: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #171717;
-} 
-
-/* 
-    This is the witchcraft part - you can decide the 2D layout with grid.
-    This means for example that the box-1 <div> is shaped down here as you wish.
-
-*/
-
-#grid #box-1 {
-    grid-row: 1/2;
-    grid-column: 1/2;
-    background: #4effd3;
+    flex-direction: column;
 }
 
-#grid #box-2 {
-    grid-row: 1/3;
-    grid-column: 3/4;
-    background: #e7e7e7;
+#copy-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    border: none;
+    background-image: url(http://icons.iconarchive.com/icons/custom-icon-design/mono-general-2/512/copy-icon.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    background-color: #ffa352;
 }
 
-#grid #box-3 {
-    grid-row: 2/3;
-    grid-column: 1/3;
-    background: #ffe25f;
+#copy-button:hover {
+    background-color: #4CAF50;
+    border: 2px solid white;
 }
 
-#grid #box-4 {
-    grid-row: 1/2;
-    grid-column: 2/3;
-    background: #87cfff;
+#copy-button:active {
+    background-color: #3ddb42;
+    border: 2px solid white;
+    background-image: url(https://icons.iconarchive.com/icons/praveen/minimal-outline/512/check-icon.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#cat-image-box {
+    position: relative;
+}
+
+
+.cat-image {
+    width: 500px;
+    height: 500px;
+    background-color: #03131a;
+    padding: 5px;
+    border-radius: 9px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cat-button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+}
+
+#widget-settings {
+    margin-top: 10px;
+}
+
+button {
+    background-color: #ff9538;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #4CAF50;
+    border: 2px solid white;
+}
+
+button:active {
+    background-color: #3ddb42;
+    border: 2px solid white;
+}
+
+footer {
+    min-height: 200px;
 }

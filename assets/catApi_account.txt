@@ -1,0 +1,19 @@
+
+
+10minute mail signup:
+
+xyceiwrnddqqencivs@nvhrw.com
+
+
+API KEY:
+
+Thanks for signing up, welcome to the The Cat API!
+
+Here's your API key:
+
+29874897-d929-49e8-8b94-30c96a448686
+
+Use it as the 'x-api-key' header when making any request to the API, or by adding as a query string parameter e.g. 'api_key=29874897-d929-49e8-8b94-30c96a448686'
+
+
+snippets: https://thecatapi.com/thanks

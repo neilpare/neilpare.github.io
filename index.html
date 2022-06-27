@@ -2,35 +2,30 @@
 
 <html>
     <head>
-        <link rel="stylesheet" href="styles.css">
+        <title>CatApi - a random cat image every time you need</title>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <script src="./index.js" defer></script>
     </head>
 
     <body>
         <header>
-            <h1>
-                <span class="white-highlight">Grid / Flex</span> Learning
-            </h1>
+            <div class="header-title-div">
+                <h1 class="header-h1">Cats!</h1>
+                <h2 class="header-h2">a random cat image every time you need</h2>
+            </div>
         </header>
 
-        <main>
-            <section id="grid">
-                <div class="box" id="box-1">
-                    <div class="box-content">Hello Box! 1</div>
+        <article class="cat-widget">
+            <div class="cat-box">
+                <div id="cat-image-box">
+                    <!-- JS expects cat-image id to display image, id and class declared also in CONFIG -->
+                    <img id="cat-image" class="cat-image" src="" alt="a random image of a cat" />
+                    <input id="copy-button" type="button" onclick="invokeCopyToClipBoard()">
                 </div>
+                <button id="get-image-button" class="cat-button" type="button" onclick="loadNewCatImage()">Give Cat!</button>
+            </div>
 
-                <div class="box" id="box-2">
-                    <div class="box-content">Hello Box! 2</div>
-                </div>
-
-                <div class="box" id="box-3">
-                    <div class="box-content">Hello Box! 3</div>
-                </div>
-
-                <div class="box" id="box-4">
-                    <div class="box-content">Hello Box! 4</div>
-                </div>
-            </section>
-        </main>
+        </article>
 
         <footer>
 
